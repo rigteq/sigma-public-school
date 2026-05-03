@@ -36,6 +36,94 @@
 
 <!-- template styles -->
 <link rel="stylesheet" href="assets/css/kidearn.css" />
+<style>
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 90px;
+    z-index: 9999;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25d366;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+    transition: transform 0.25s ease;
+}
+.whatsapp-float:hover { transform: translateY(-3px); }
+.quick-callback-notice {
+    position: fixed;
+    right: 20px;
+    bottom: 160px;
+    z-index: 9998;
+    width: 280px;
+    max-width: calc(100vw - 40px);
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid rgba(44, 62, 80, 0.1);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.35s ease;
+    padding: 18px 18px 18px 20px;
+    display: none;
+}
+.quick-callback-notice.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.quick-callback-notice__title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.quick-callback-notice__text {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #4f4f4f;
+}
+.quick-callback-notice__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.quick-callback-notice__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #25d366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 13px;
+}
+.quick-callback-notice__close {
+    background: transparent;
+    border: none;
+    color: #6b7280;
+    font-size: 16px;
+    cursor: pointer;
+}
+.testimonial-three__item__author__icon {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 50%;
+    background: #f6f8fb;
+    color: #335d92;
+    margin-right: 14px;
+}
+</style>
 </head>
 
 <body class="custom-cursor">
@@ -53,208 +141,19 @@
         <div class="main-header__inner">
             <div class="main-header__logo">
                 <a href="index.php">
-                    <img src="assets/images/logo-new.png" alt="SIGMA PUBLIC SCHOOL" width="139">
+                    <img src="assets/images/logo-new.png" alt="SIGMA PUBLIC SCHOOL" width="55">
                 </a>
             </div><!-- /.main-header__logo -->
 
-            <nav class="main-header__nav main-menu">
+                        <nav class="main-header__nav main-menu">
                 <ul class="main-menu__list">
-	
-	<li class="dropdown megamenu">
-		<a href="index.php">Home</a>
-		<ul>
-			<li>
-				<section class="home-showcase">
-	<div class="container">
-		<div class="home-showcase__inner">
-			<div class="row">
-				<div class="col-md-6 col-lg-3">
-					<div class="demo-one__card">
-						<div class="demo-one__image">
-							<img src="assets/images/home-showcase/home-showcase-1.jpg" alt="">
-							<div class="demo-one__btns">
-								<a href="index.php" class="kidearn-btn demo-one__btn">
-									<span>Multi Page</span>
-								</a><!-- /.thm-btn demo-one__btn -->
-								<a href="#" class="kidearn-btn demo-one__btn">
-									<span>One Page</span>
-								</a><!-- /.thm-btn demo-one__btn -->
-							</div><!-- /.demo-one__btns -->
-						</div><!-- /.demo-one__image -->
-						<div class="demo-one__content">
-							<h3 class="demo-one__title">
-								<a href="index.php">Homepage 01</a>
-							</h3><!-- /.demo-one__title -->
-						</div><!-- /.demo-one__content -->
-					</div><!-- /.demo-one__card -->
-				</div><!-- /.col-md-6 col-lg-3 -->
-				<div class="col-md-6 col-lg-3">
-					<div class="demo-one__card">
-						<div class="demo-one__image">
-							<img src="assets/images/home-showcase/home-showcase-2.jpg" alt="">
-							<div class="demo-one__btns">
-								<a href="#" class="kidearn-btn demo-one__btn">
-									<span>Multi Page</span>
-								</a><!-- /.thm-btn demo-one__btn -->
-								<a href="#" class="kidearn-btn demo-one__btn">
-									<span>One Page</span>
-								</a><!-- /.thm-btn demo-one__btn -->
-							</div><!-- /.demo-one__btns -->
-						</div><!-- /.demo-one__image -->
-						<div class="demo-one__content">
-							<h3 class="demo-one__title">
-								<a href="#">Homepage 02</a>
-							</h3><!-- /.demo-one__title -->
-						</div><!-- /.demo-one__content -->
-					</div><!-- /.demo-one__card -->
-				</div><!-- /.col-md-6 col-lg-3 -->
-				<div class="col-md-6 col-lg-3">
-					<div class="demo-one__card">
-						<div class="demo-one__image">
-							<img src="assets/images/home-showcase/home-showcase-3.jpg" alt="">
-							<div class="demo-one__btns">
-								<a href="index.php" class="kidearn-btn demo-one__btn">
-									<span>Multi Page</span>
-								</a><!-- /.thm-btn demo-one__btn -->
-								<a href="#" class="kidearn-btn demo-one__btn">
-									<span>One Page</span>
-								</a><!-- /.thm-btn demo-one__btn -->
-							</div><!-- /.demo-one__btns -->
-						</div><!-- /.demo-one__image -->
-						<div class="demo-one__content">
-							<h3 class="demo-one__title">
-								<a href="index.php">Homepage 03</a>
-							</h3><!-- /.demo-one__title -->
-						</div><!-- /.demo-one__content -->
-					</div><!-- /.demo-one__card -->
-				</div><!-- /.col-md-6 col-lg-3 -->
-				<div class="col-md-6 col-lg-3">
-					<div class="demo-one__card">
-						<div class="demo-one__image">
-							<img src="assets/images/home-showcase/home-showcase-4.jpg" alt="">
-							<div class="demo-one__btns">
-								<a href="#" class="kidearn-btn demo-one__btn">
-									<span>Multi Page</span>
-								</a><!-- /.thm-btn demo-one__btn -->
-								<a href="#" class="kidearn-btn demo-one__btn">
-									<span>One Page</span>
-								</a><!-- /.thm-btn demo-one__btn -->
-							</div><!-- /.demo-one__btns -->
-						</div><!-- /.demo-one__image -->
-						<div class="demo-one__content">
-							<h3 class="demo-one__title">
-								<a href="#">Homepage 04</a>
-							</h3><!-- /.demo-one__title -->
-						</div><!-- /.demo-one__content -->
-					</div><!-- /.demo-one__card -->
-				</div><!-- /.col-md-6 col-lg-3 -->
-			</div><!-- /.row -->
-
-		</div><!-- /.home-showcase__inner -->
-	</div><!-- /.container -->
-</section>
-			</li>
-		</ul>
-	</li>
-	
-	
-
-	<li>
-		<a href="#">About</a>
-	</li>
-	<li class="dropdown">
-		<a href="#">Pages</a>
-		<ul>
-			<li><a href="#">Our teacher</a></li>
-			<li><a href="#">Teacher carousel</a></li>
-			<li><a href="#">Teacher details</a></li>
-			<li><a href="#">Pricing tables</a></li>
-			<li>
-				<a href="#">Gallery</a>
-				<ul>
-					<li><a href="#">Gallery filter</a></li>
-					<li><a href="#">Gallery grid</a></li>
-					<li><a href="#">Gallery carousel</a></li>
-				</ul>
-			</li>
-			<li><a href="#">FAQs</a></li>
-			<li><a href="#">Login</a></li>
-			<li><a href="#">404 error</a></li>
-		</ul>
-	</li>
-	<li class="dropdown">
-		<a href="#">Events</a>
-		<ul>
-			<li><a href="#">Events grid</a></li>
-			<li><a href="#">Events carousel</a></li>
-			<li><a href="#">Events details</a></li>
-		</ul>
-	</li>
-	<li class="dropdown">
-		<a href="#">Programs</a>
-		<ul>
-			<li><a href="#">Programs grid</a></li>
-			<li><a href="#">Programs carousel</a></li>
-			<li><a href="#">Toddler program</a></li>
-			<li><a href="#">Preschool program</a></li>
-			<li><a href="#">Kindergarten program</a></li>
-			<li><a href="#">Flex-care program</a></li>
-			<li> <a href="#">Art program</a></li>
-			<li><a href="#">Discipline program</a></li>
-		</ul>
-	</li>
-
-	<li class="dropdown">
-		<a href="#">Shop</a>
-		<ul class="sub-menu">
-			<li class="dropdown">
-				<a href="#">Products</a>
-				<ul class="sub-menu">
-					<li><a href="#">No sidebar</a></li>
-					<li><a href="#">Left sidebar</a></li>
-					<li><a href="#">Right sidebar</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Products carousel</a></li>
-			<li><a href="#">Product details</a></li>
-			<li><a href="#">Cart</a></li>
-			<li><a href="#">Checkout</a></li>
-		</ul>
-	</li>
-	<li class="dropdown">
-		<a href="#">News</a>
-		<ul class="sub-menu">
-			<li class="dropdown">
-				<a href="#">News grid</a>
-				<ul class="sub-menu">
-					<li><a href="#">No sidebar</a></li>
-					<li><a href="#">Left sidebar</a></li>
-					<li><a href="#">Right sidebar</a></li>
-				</ul>
-			</li>
-			<li class="dropdown">
-				<a href="#">News list</a>
-				<ul class="sub-menu">
-					<li><a href="#">No sidebar</a></li>
-					<li><a href="#">Left sidebar</a></li>
-					<li><a href="#">Right sidebar</a></li>
-				</ul>
-			</li>
-			<li><a href="#">News carousel</a></li>
-			<li class="dropdown">
-				<a href="#">News details</a>
-				<ul class="sub-menu">
-					<li><a href="#">No sidebar</a></li>
-					<li><a href="#">Left sidebar</a></li>
-					<li><a href="#">Right sidebar</a></li>
-				</ul>
-			</li>
-		</ul>
-	</li>
-	<li>
-		<a href="#">Contact</a>
-	</li>
-</ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav><!-- /.main-header__nav -->
             <div class="main-header__right">
                 <div class="mobile-nav__btn mobile-nav__toggler">
@@ -270,20 +169,13 @@
                         <!-- /.main-header__call__number -->
                     </span><!-- /.main-header__call__content -->
                 </a>
-                <a href="#" class="search-toggler main-header__search">
-                    <i class="icon-search" aria-hidden="true"></i>
-                    <span class="sr-only">Search</span>
-                </a><!-- /.main-header__search-btn -->
-                <a href="#" class="main-header__cart">
-                    <i class="icon-trolley-cart" aria-hidden="true"></i>
-                    <span class="sr-only">Search</span>
-                </a><!-- /.main-header__cart-btn -->
+
             </div><!-- /.main-header__right -->
         </div><!-- /.main-header__inner -->
     </div><!-- /.container-fluid -->
 </header><!-- /.main-header -->
 <!-- main-slider-start -->
-<section class="main-slider-one">
+<section class="main-slider-one" id="home">
 	<div class="main-slider-one__shape-top"></div>
 	<div class="main-slider-one__shape1 wow slideInDown"  data-wow-delay="200ms"><img src="assets/images/shapes/slider-shape-1.png" alt="kidearn"/> </div>
 	<div class="main-slider-one__shape2 wow slideInDown"  data-wow-delay="300ms"><img src="assets/images/shapes/slider-shape-2.png" alt="kidearn"/> </div>
@@ -432,41 +324,69 @@
 	</div>
 	<div class="main-slider-one__shape-bottom"></div>
 </section>
-<section class="service-three">
+<section class="service-three" id="services">
 	<div class="container">
 		<div class="row gutter-y-30">
 			<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="100ms">
 				<div class="service-three__item" style="--accent-color: #F25334;">
 					<div class="service-three__item__shape"></div>
-					<div class="service-three__item__icon"><span class="icon-eco-house"></span></div>
-					<h4 class="service-three__item__title">Home-like environment</h4>
+					<div class="service-three__item__icon"><span class="icon-instructor"></span></div>
+					<h4 class="service-three__item__title">Well Trained Staff</h4>
 				</div>
 			</div><!-- /.service-item -->
 			<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
 				<div class="service-three__item" style="--accent-color: #75C137;">
 					<div class="service-three__item__shape"></div>
-					<div class="service-three__item__icon"><span class="icon-safety"></span></div>
-					<h4 class="service-three__item__title">Safety and scurity</h4>
+					<div class="service-three__item__icon"><span class="icon-playtime"></span></div>
+					<h4 class="service-three__item__title">Activity Based Learning</h4>
 				</div>
 			</div><!-- /.service-item -->
 			<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
 				<div class="service-three__item" style="--accent-color: #26A6A1;">
 					<div class="service-three__item__shape"></div>
-					<div class="service-three__item__icon"><span class="icon-presentation"></span></div>
-					<h4 class="service-three__item__title">Quality educators</h4>
+					<div class="service-three__item__icon"><span class="icon-graduated"></span></div>
+					<h4 class="service-three__item__title">Scientific Study Method</h4>
 				</div>
 			</div><!-- /.service-item -->
 			<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
 				<div class="service-three__item" style="--accent-color: #FFAA23;">
 					<div class="service-three__item__shape"></div>
-					<div class="service-three__item__icon"><span class="icon-happy-children"></span></div>
-					<h4 class="service-three__item__title">Play to learn</h4>
+					<div class="service-three__item__icon"><span class="icon-presentation"></span></div>
+					<h4 class="service-three__item__title">Smart Board Learning</h4>
+				</div>
+			</div><!-- /.service-item -->
+			<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="500ms">
+				<div class="service-three__item" style="--accent-color: #5C6AC4;">
+					<div class="service-three__item__shape"></div>
+					<div class="service-three__item__icon"><span class="icon-safety"></span></div>
+					<h4 class="service-three__item__title">CCTV Camera</h4>
+				</div>
+			</div><!-- /.service-item -->
+			<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="600ms">
+				<div class="service-three__item" style="--accent-color: #39A7D3;">
+					<div class="service-three__item__shape"></div>
+					<div class="service-three__item__icon"><span class="icon-eco-house"></span></div>
+					<h4 class="service-three__item__title">Fully Air Conditioned Rooms</h4>
+				</div>
+			</div><!-- /.service-item -->
+			<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="700ms">
+				<div class="service-three__item" style="--accent-color: #E94698;">
+					<div class="service-three__item__shape"></div>
+					<div class="service-three__item__icon"><span class="icon-trophy"></span></div>
+					<h4 class="service-three__item__title">Best in Class Infrastructure</h4>
+				</div>
+			</div><!-- /.service-item -->
+			<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="800ms">
+				<div class="service-three__item" style="--accent-color: #F4B942;">
+					<div class="service-three__item__shape"></div>
+					<div class="service-three__item__icon"><span class="icon-online-learning"></span></div>
+					<h4 class="service-three__item__title">Computer Based Learning</h4>
 				</div>
 			</div><!-- /.service-item -->
 		</div>
 	</div>
 </section>
-<section class="about-three">
+<section class="about-three" id="about">
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-6 wow fadeInLeft" data-wow-delay="300ms">
@@ -491,16 +411,15 @@
 	
 	<h6 class="sec-title__tagline">About Us</h6><!-- /.sec-title__tagline -->
 	
-	<h3 class="sec-title__title">Our passion is childhood,<br> and we’re in kindergarten</h3><!-- /.sec-title__title -->
+	<h3 class="sec-title__title">Sigma Public School: Modern Indian Education<br>Rooted in values &amp; excellence</h3><!-- /.sec-title__title -->
 </div><!-- /.sec-title -->
 					<p class="about-three__content__text">
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-						the industry's standard dummy text ever since the 1500s,
+						Sigma Public School is a premier Indian school dedicated to academic excellence, character building and holistic development. We combine smart classrooms, activity-based learning and a disciplined study environment so every student grows into a confident, responsible citizen.
 					</p>
 					<ul class="about-three__content__lists">
-						<li><span class="fa fa-check-circle"></span>Indoor/Outdoor Games for Little Kids</li>
-						<li><span class="fa fa-check-circle"></span>Supporting the Child’s Personality</li>
-						<li><span class="fa fa-check-circle"></span>Professional & Qualified Teacheer</li>
+						<li><span class="fa fa-check-circle"></span>Experienced faculty delivering modern Indian pedagogy</li>
+						<li><span class="fa fa-check-circle"></span>Smart board and computer-based learning across all grades</li>
+						<li><span class="fa fa-check-circle"></span>All-round personality development through sports, arts and values</li>
 					</ul>
 					<div class="about-three__info-wrapper">
 						<div class="about-three__author">
@@ -529,7 +448,135 @@
 		</div>
 	</div>
 </section>
-<section class="program-three">
+<style>
+/* ── Mission Sigma section ── */
+.mission-sigma-text {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #4a5568;
+    line-height: 1.75;
+    max-width: 720px;
+}
+
+/* ── Leadership cards ── */
+.leader-card {
+    position: relative;
+    border-radius: 20px;
+    padding: 28px 24px 24px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+.leader-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.13);
+}
+.leader-card--principal {
+    background: linear-gradient(135deg, #eaf4ff 0%, #dbeeff 100%);
+    border-top: 4px solid #2390FF;
+}
+.leader-card--director {
+    background: linear-gradient(135deg, #fff8ec 0%, #ffeed4 100%);
+    border-top: 4px solid #FFAA23;
+}
+.leader-card__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+.leader-card--principal .leader-card__badge {
+    background: rgba(35,144,255,0.12);
+    color: #1a6fd4;
+}
+.leader-card--director .leader-card__badge {
+    background: rgba(255,170,35,0.15);
+    color: #c27a00;
+}
+.leader-card__avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 14px;
+    flex-shrink: 0;
+}
+.leader-card--principal .leader-card__avatar { background: linear-gradient(135deg, #2390FF, #1a6fd4); }
+.leader-card--director  .leader-card__avatar { background: linear-gradient(135deg, #FFAA23, #e88e00); }
+.leader-card__name {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1a2340;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+.leader-card__desc {
+    font-size: 13.5px;
+    color: #5a6578;
+    line-height: 1.65;
+    margin-bottom: 0;
+}
+.leader-card__deco {
+    position: absolute;
+    bottom: -18px;
+    right: -18px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    opacity: 0.08;
+}
+.leader-card--principal .leader-card__deco { background: #2390FF; }
+.leader-card--director  .leader-card__deco { background: #FFAA23; }
+</style>
+
+<section class="leadership-two">
+    <div class="container">
+        <div class="sec-title text-left">
+            <h6 class="sec-title__tagline">MISSION SIGMA</h6>
+            <p class="mission-sigma-text">The curriculum at Sigma is conceived in such a way that everything the child learns at the preschool prepares him for an easy transition into Grade 1. This smooth step towards a bigger future is accomplished via a series of activities that are woven into academic programmes.</p>
+        </div>
+        <div class="row align-items-center mt-4">
+            <div class="col-lg-6">
+                <p>At Sigma Public School, we focus on creating a warm, joyful early years experience through activity-based learning, social-emotional development, and strong routines that make every child feel confident.</p>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="leader-card leader-card--principal">
+                            <div class="leader-card__deco"></div>
+                            <span class="leader-card__badge"><i class="fa fa-graduation-cap"></i> Principal</span>
+                            <div class="leader-card__avatar">SG</div>
+                            <p class="leader-card__name">Mrs. Shalini Gupta</p>
+                            <p class="leader-card__desc">Oversees academic programs and ensures every child receives a caring, nurturing foundation.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="leader-card leader-card--director">
+                            <div class="leader-card__deco"></div>
+                            <span class="leader-card__badge"><i class="fa fa-star"></i> Director</span>
+                            <div class="leader-card__avatar">RK</div>
+                            <p class="leader-card__name">Mr. Rajesh Kumar</p>
+                            <p class="leader-card__desc">Leads the school vision and champions a safe, nurturing environment for young learners.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="program-three" id="programs">
 	<div class="program-three__top-shape"></div>
 	<div class="program-three__top-bg">
 		<div class="program-three__top-bg__inner" style="background-image: url(assets/images/shapes/program-bg-shape-3.png);"></div>
@@ -561,7 +608,7 @@
         </div><!-- /.program-three__item__icon -->
         <h3 class="program-three__item__title"><a href="#">Toddler</a></h3><!-- /.program-three__item__title -->
         <div class="program-three__item__age">(1.5-3 years)</div><!-- /.program-three__item__age -->
-        <p class="program-three__item__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p><!-- /.program-three__item__text -->
+        <p class="program-three__item__text">Nurturing early independence through play-based learning, social skills, and language exploration.</p><!-- /.program-three__item__text -->
         <a class="program-three__item__rm" href="#"><span class="icon-right-arrow"></span></a><!-- /.program-three__item__text -->
     </div><!-- /.program-three__item__content -->
 </div><!-- /.program-three__item__one -->
@@ -577,7 +624,7 @@
         </div><!-- /.program-three__item__icon -->
         <h3 class="program-three__item__title"><a href="#">Preschool</a></h3><!-- /.program-three__item__title -->
         <div class="program-three__item__age">(2-3 years)</div><!-- /.program-three__item__age -->
-        <p class="program-three__item__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p><!-- /.program-three__item__text -->
+        <p class="program-three__item__text">A gentle preschool curriculum focused on creative discovery, sensory play, and developing strong routines.</p><!-- /.program-three__item__text -->
         <a class="program-three__item__rm" href="#"><span class="icon-right-arrow"></span></a><!-- /.program-three__item__text -->
     </div><!-- /.program-three__item__content -->
 </div><!-- /.program-three__item__one -->
@@ -593,7 +640,7 @@
         </div><!-- /.program-three__item__icon -->
         <h3 class="program-three__item__title"><a href="#">Kindergarten</a></h3><!-- /.program-three__item__title -->
         <div class="program-three__item__age">(4-5 years)</div><!-- /.program-three__item__age -->
-        <p class="program-three__item__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p><!-- /.program-three__item__text -->
+        <p class="program-three__item__text">Foundational learning with phonics, numeracy, art, and physical activity to prepare children for Grade 1.</p><!-- /.program-three__item__text -->
         <a class="program-three__item__rm" href="#"><span class="icon-right-arrow"></span></a><!-- /.program-three__item__text -->
     </div><!-- /.program-three__item__content -->
 </div><!-- /.program-three__item__one -->
@@ -609,7 +656,7 @@
         </div><!-- /.program-three__item__icon -->
         <h3 class="program-three__item__title"><a href="#">Flex-care</a></h3><!-- /.program-three__item__title -->
         <div class="program-three__item__age">(5-12 years)</div><!-- /.program-three__item__age -->
-        <p class="program-three__item__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p><!-- /.program-three__item__text -->
+        <p class="program-three__item__text">After-school support with homework help, enrichment activities, and supervised fun for busy families.</p><!-- /.program-three__item__text -->
         <a class="program-three__item__rm" href="#"><span class="icon-right-arrow"></span></a><!-- /.program-three__item__text -->
     </div><!-- /.program-three__item__content -->
 </div><!-- /.program-three__item__one -->
@@ -892,7 +939,7 @@
 	
 	<h6 class="sec-title__tagline">Check Funfacts</h6><!-- /.sec-title__tagline -->
 	
-	<h3 class="sec-title__title">We make difference in the<br> life of child</h3><!-- /.sec-title__title -->
+	<h3 class="sec-title__title">Sigma Public School: Modern Indian Education<br>Rooted in values &amp; excellence</h3><!-- /.sec-title__title -->
 </div><!-- /.sec-title -->
 					<div class="row gutter-y-30">
 						<div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
@@ -900,8 +947,8 @@
 								<div class="funfact-two__icon"><span class="icon-graduated"></span></div>
 								<div class="funfact-two__count">
 									<span class="count-box">
-										<span class="count-text" data-stop="30.3" data-speed="1500"></span>
-									</span>k
+										<span class="count-text" data-stop="25" data-speed="1500"></span>
+									</span>
 								</div><!-- /.funfact-two__count -->
 								<p class="funfact-two__title">Student Enrolled</p><!-- /.funfact-two__title -->
 							</div><!-- /.fact-item -->
@@ -911,8 +958,8 @@
 								<div class="funfact-two__icon"><span class="icon-online-learning"></span></div>
 								<div class="funfact-two__count">
 									<span class="count-box">
-										<span class="count-text" data-stop="40.5" data-speed="1500"></span>
-									</span>k
+										<span class="count-text" data-stop="3" data-speed="1500"></span>
+									</span>
 								</div><!-- /.funfact-two__count -->
 								<p class="funfact-two__title">Class completed</p><!-- /.funfact-two__title -->
 							</div><!-- /.fact-item -->
@@ -922,7 +969,7 @@
 								<div class="funfact-two__icon"><span class="icon-rating"></span></div>
 								<div class="funfact-two__count">
 									<span class="count-box">
-										<span class="count-text" data-stop="88.9" data-speed="1500"></span>
+										<span class="count-text" data-stop="95" data-speed="1500"></span>
 									</span>%
 								</div><!-- /.funfact-two__count -->
 								<p class="funfact-two__title">satisfaction rate</p><!-- /.funfact-two__title -->
@@ -933,8 +980,8 @@
 								<div class="funfact-two__icon"><span class="icon-instructor"></span></div>
 								<div class="funfact-two__count">
 									<span class="count-box">
-										<span class="count-text" data-stop="6.30" data-speed="1500"></span>
-									</span>+
+										<span class="count-text" data-stop="5" data-speed="1500"></span>
+									</span>
 								</div><!-- /.funfact-two__count -->
 								<p class="funfact-two__title">Top instructors</p><!-- /.funfact-two__title -->
 							</div><!-- /.fact-item -->
@@ -992,7 +1039,7 @@
 						</div>
 						<div class="testimonial-three__item__wrapper">
 							<div class="testimonial-three__item__author">
-								<img src="assets/images/resources/testi-author-1.png" alt="Sigma Public School parent"/>
+								<span class="testimonial-three__item__author__icon fa fa-user-circle" aria-hidden="true"></span>
 								<h5 class="testimonial-three__item__author__name">Neha Sharma</h5>
 								<p class="testimonial-three__item__author__designation">Mother of Rohit</p>
 							</div>
@@ -1009,9 +1056,43 @@
 						</div>
 						<div class="testimonial-three__item__wrapper">
 							<div class="testimonial-three__item__author">
-								<img src="assets/images/resources/testi-author-2.png" alt="Sigma Public School parent"/>
+								<span class="testimonial-three__item__author__icon fa fa-user-circle" aria-hidden="true"></span>
 								<h5 class="testimonial-three__item__author__name">Amit Verma</h5>
 								<p class="testimonial-three__item__author__designation">Father of Priya</p>
+							</div>
+							<div class="testimonial-three__item__ratings">
+								<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.slider-item -->
+				<div class="item">
+					<div class="testimonial-three__item">
+						<div class="testimonial-three__item__quote">
+							A warm school with strong discipline and caring teachers. The learning journey has been joyful for my child.
+						</div>
+						<div class="testimonial-three__item__wrapper">
+							<div class="testimonial-three__item__author">
+								<span class="testimonial-three__item__author__icon fa fa-user-circle" aria-hidden="true"></span>
+								<h5 class="testimonial-three__item__author__name">Suman Patel</h5>
+								<p class="testimonial-three__item__author__designation">Mother of Aarav</p>
+							</div>
+							<div class="testimonial-three__item__ratings">
+								<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+							</div>
+						</div>
+					</div>
+				</div><!-- /.slider-item -->
+				<div class="item">
+					<div class="testimonial-three__item">
+						<div class="testimonial-three__item__quote">
+							Excellent environment, friendly staff, and good communication. Admission process was smooth and the school feels safe.
+						</div>
+						<div class="testimonial-three__item__wrapper">
+							<div class="testimonial-three__item__author">
+								<span class="testimonial-three__item__author__icon fa fa-user-circle" aria-hidden="true"></span>
+								<h5 class="testimonial-three__item__author__name">Priya Nair</h5>
+								<p class="testimonial-three__item__author__designation">Mother of Anaya</p>
 							</div>
 							<div class="testimonial-three__item__ratings">
 								<span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
@@ -1024,7 +1105,7 @@
 		</div>
 	</div>
 </section>
-<section class="event-one">
+<section class="event-one" id="events">
 	<div class="container">
 		<div class="sec-title text-center">
 	
@@ -1235,7 +1316,7 @@
 	</div><!-- /.container -->
     <div class="blog-one--home-three__bottom-shape"></div>
 </section><!-- /.blog-one blog-one--home-three -->
-<section class="contact-three">
+<section class="contact-three" id="contact">
 	<div class="container">
         <div class="row">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="200ms">
@@ -1294,77 +1375,6 @@
         </div>
 	</div><!-- /.container -->
 </section><!-- /.contact-three -->
-<div class="client-carousel @@extraClassName">
-    <div class="container">
-        <h5 class="client-carousel__tilte"><span>2k + Brands Trust Us</span></h5><!-- section-title -->
-        <div class="client-carousel__one kidearn-owl__carousel owl-theme owl-carousel" data-owl-options='{
-            "items": 5,
-            "margin": 65,
-            "smartSpeed": 700,
-            "loop":true,
-            "autoplay": 6000,
-            "nav":false,
-            "dots":false,
-            "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
-            "responsive":{
-                "0":{
-                    "items":1,
-                    "margin": 0
-                },
-                "360":{
-                    "items":2,
-                    "margin": 0
-                },
-                "575":{
-                    "items":3,
-                    "margin": 30
-                },
-                "768":{
-                    "items":3,
-                    "margin": 40
-                },
-                "992":{
-                    "items": 4,
-                    "margin": 40
-                },
-                "1200":{
-                    "items": 5
-                }
-            }
-            }'>
-            <div class="client-carousel__one__item">
-                <img src="assets/images/brand/brand-1-1.png" alt="kidearn">
-            </div><!-- /.owl-slide-item-->
-            <div class="client-carousel__one__item">
-                <img src="assets/images/brand/brand-1-1.png" alt="kidearn">
-            </div><!-- /.owl-slide-item-->
-            <div class="client-carousel__one__item">
-                <img src="assets/images/brand/brand-1-1.png" alt="kidearn">
-            </div><!-- /.owl-slide-item-->
-            <div class="client-carousel__one__item">
-                <img src="assets/images/brand/brand-1-1.png" alt="kidearn">
-            </div><!-- /.owl-slide-item-->
-            <div class="client-carousel__one__item">
-                <img src="assets/images/brand/brand-1-1.png" alt="kidearn">
-            </div><!-- /.owl-slide-item-->
-            <div class="client-carousel__one__item">
-                <img src="assets/images/brand/brand-1-1.png" alt="kidearn">
-            </div><!-- /.owl-slide-item-->
-            <div class="client-carousel__one__item">
-                <img src="assets/images/brand/brand-1-1.png" alt="kidearn">
-            </div><!-- /.owl-slide-item-->
-            <div class="client-carousel__one__item">
-                <img src="assets/images/brand/brand-1-1.png" alt="kidearn">
-            </div><!-- /.owl-slide-item-->
-            <div class="client-carousel__one__item">
-                <img src="assets/images/brand/brand-1-1.png" alt="kidearn">
-            </div><!-- /.owl-slide-item-->
-            <div class="client-carousel__one__item">
-                <img src="assets/images/brand/brand-1-1.png" alt="kidearn">
-            </div><!-- /.owl-slide-item-->
-        </div><!-- /.thm-owl__slider -->
-    </div><!-- /.container -->
-</div><!-- /.client-carousel -->
 <section class="gallery-one gallery-one--home-three">
 	<div class="container">
 		<div class="gallery-one__carousel kidearn-owl__carousel  kidearn-owl__carousel--basic-nav owl-carousel owl-theme"
@@ -1498,7 +1508,7 @@
 				<div class="col-md-6 col-xl-4">
 					<div class="footer-widget footer-widget--about">
 						<a href="index.php" class="footer-widget__logo">
-							<img src="assets/images/logo-new.png" width="160" alt="SIGMA PUBLIC SCHOOL">
+							<img src="assets/images/logo-new.png" width="65" alt="SIGMA PUBLIC SCHOOL">
 						</a>
 						<ul class="list-unstyled footer-widget__info">
 							<li>
@@ -1513,19 +1523,19 @@
 						</ul><!-- /.list-unstyled -->
 						<div class="footer-widget__social">
                             <a href="https://twitter.com/">
-<i class="fab fa-twitter" aria-hidden="true"></i>
+<i class="fab fa-twitter" style="color:#1DA1F2;" aria-hidden="true"></i>
 <span class="sr-only">Twitter</span>
 </a>
 <a href="https://www.facebook.com/people/sigma-public-school-Rajbagh-sahibabad/61585979680698/#">
-<i class="fab fa-facebook" aria-hidden="true"></i>
+<i class="fab fa-facebook" style="color:#1877F2;" aria-hidden="true"></i>
 <span class="sr-only">Facebook</span>
 </a>
 <a href="https://pinterest.com/">
-<i class="fab fa-pinterest-p" aria-hidden="true"></i>
+<i class="fab fa-pinterest-p" style="color:#E60023;" aria-hidden="true"></i>
 <span class="sr-only">Pinterest</span>
 </a>
 <a href="https://www.instagram.com/sigmapublicschoolghaziabad/">
-<i class="fab fa-instagram" aria-hidden="true"></i>
+<i class="fab fa-instagram" style="color:#E1306C;" aria-hidden="true"></i>
 <span class="sr-only">Instagram</span>
 </a>
                         </div><!-- /.footer-widget__social -->
@@ -1617,7 +1627,7 @@
         <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
         <div class="logo-box">
-            <a href="index.php" aria-label="logo image"><img src="assets/images/logo-new.png" width="155"
+            <a href="index.php" aria-label="logo image"><img src="assets/images/logo-new.png" width="55"
                     alt="" /></a>
         </div>
         <!-- /.logo-box -->
@@ -1702,8 +1712,47 @@
 <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
 <!-- template js -->
 <script src="assets/js/kidearn.js"></script>
+<a href="https://wa.me/918448644606?text=Hello%20Sigma%20Public%20School%20Admissions" class="whatsapp-float" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<div class="quick-callback-notice" id="quickCallbackNotice">
+    <div class="quick-callback-notice__title">Need a quick callback?</div>
+    <div class="quick-callback-notice__text">We can call you back in minutes to help with admissions or questions.</div>
+    <div class="quick-callback-notice__actions">
+        <a href="tel:8448644606" class="quick-callback-notice__btn">Request Call</a>
+        <button class="quick-callback-notice__close" id="callbackClose">✕</button>
+    </div>
+</div>
+<script>
+(function(){
+    if(!localStorage.getItem('sigmaCallbackSeen')){
+        setTimeout(function(){
+            var notice = document.getElementById('quickCallbackNotice');
+            if(notice) notice.classList.add('active');
+        }, 1800);
+        localStorage.setItem('sigmaCallbackSeen','1');
+    }
+    var closeBtn = document.getElementById('callbackClose');
+    if(closeBtn){
+        closeBtn.addEventListener('click', function(){
+            document.getElementById('quickCallbackNotice').classList.remove('active');
+        });
+    }
+})();
+</script>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
 
 
