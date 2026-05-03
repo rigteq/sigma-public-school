@@ -1,0 +1,13 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Keep only the static build
+index.php
+
+# Node (if ever added)
+node_modules/
